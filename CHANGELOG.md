@@ -1,3 +1,8 @@
+### 1.0.2
+- Ping++ 官方 SDK 版本 :
+    - Android: 2.1.13
+        - 兼容 order、recharge
+
 ### 1.0.1
 - 新增：添加 获取 SDK 版本号 方法
 - Ping++ 官方 SDK 版本 :
