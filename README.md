@@ -20,6 +20,8 @@ react-native link pingpp-react-native
 ```
 这个操作会把 pingpp-react-native 模块下的客户端模块自动映射到 ReactNative工程的对应的 IOS和 Android目录里。 注意，自动link并不是万能的，有些模块我们需要再手动添加一些引用。
 
+## Ping++ 标准版使用
+
 ### iOS端配置
  打开xcode，TARGET -> General -> Linked Frameworks and Libraries ，添加添加所需依赖 Frameworks：
 
@@ -203,7 +205,7 @@ Pingpp.setDebug(true);
 
 /** 
  * 调用支付
- * @param charge 或 order
+ * @param charge 或 order (String 类型)
  * @param function completionCallback  支付结果回调 (result)
  */
 Pingpp.createPayment(charge, function(result){
@@ -214,6 +216,99 @@ Pingpp.createPayment(charge, function(result){
     var extra_msg = res.extra_msg;
 });
 ```
+
+## Ping++ UI 版使用
+### Android 使用示例 
+##### 注册 activity
+
+``` xml
+<!-- Ping++ SDK -->
+ <activity
+     android:name="com.pingplusplus.android.PaymentActivity"
+     android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+     android:launchMode="singleTop"
+     android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+
+     <!--使用QQ钱包时，需要填写-->
+     <intent-filter>
+         <action android:name="android.intent.action.VIEW"/>
+
+         <category android:name="android.intent.category.BROWSABLE"/>
+         <category android:name="android.intent.category.DEFAULT"/>
+         <!-- 填写规则:qwallet + APP_ID -->
+         <data android:scheme="qwalletXXXXXXXX"/>
+     </intent-filter>
+
+ </activity>
+ 
+ <activity
+    android:name="com.pingplusplus.ui.PayActivity"
+    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+<activity
+    android:name="com.pingplusplus.ui.PaySuccessActivity"
+    android:configChanges="orientation|keyboardHidden|navigation|screenSize"/>
+
+ <!-- 微信支付 sdk ，也是 Ping++ sdk 调用入口 -->
+ <activity-alias
+     android:name=".wxapi.WXPayEntryActivity"
+     android:exported="true"
+     android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+ <!-- 支付宝 sdk -->
+ <activity
+     android:name="com.alipay.sdk.app.H5PayActivity"
+     android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+     android:exported="false"
+     android:screenOrientation="behind" >
+ </activity>
+ <activity
+     android:name="com.alipay.sdk.auth.AuthActivity"
+     android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+     android:exported="false"
+     android:screenOrientation="behind" >
+ </activity>
+
+ <!-- 银联支付 sdk -->
+ <activity
+     android:name="com.unionpay.uppay.PayActivity"
+     android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+     
+```
+
+##### 额外配置
+
+- 招行一网通配置：
+    需在string.xml中配置cmbkb_publickey字段, 如:
+    
+    ```xml
+    <string name="cmbkb_publickey">填写自己的publickey</string>
+    ```
+    
+#### 调用方法
+
+``` js
+/** 
+ * 调用渠道面板
+ * @param channels 需要显示的渠道数组
+ * @param function 渠道选择回调 返回选中的渠道
+ */
+Pingpp.showPaymentChannels(["alipay", "wx", "upacp"], function (channel) {
+    alert(channel);
+});
+```
+
+```js
+/** 
+ * 调用支付
+ * @param charge 或 order (String 类型)
+ * @param function completionCallback  支付结果回调 (result)
+ */
+Pingpp.createPay(charge, function(result) {
+    alert(result);
+});
+```
+
+
 
 **关于如何使用 SDK 请参考 [开发者中心](https://www.pingxx.com/docs/index)**
 

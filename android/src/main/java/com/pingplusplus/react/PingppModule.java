@@ -7,6 +7,12 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.pingplusplus.android.PingppLog;
 import com.pingplusplus.android.Pingpp;
+import android.util.Log;
+import com.facebook.react.bridge.ReadableArray;
+import com.pingplusplus.ui.PingppUI;
+import com.pingplusplus.ui.ChannelListener;
+import com.pingplusplus.ui.PaymentHandler;
+import org.json.JSONObject;
 
 /**
  * @author dong {hwongrex@gmail.com}
@@ -37,6 +43,42 @@ public class PingppModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getVersion(Callback callback) {
     callback.invoke(Pingpp.VERSION);
+  }
+
+  @ReactMethod
+  public void showPaymentChannels(ReadableArray channels, final Callback callback) {
+    String[] chs = (String[])channels.toArrayList().toArray(new String[channels.size()]);
+    PingppUI.enableChannels(chs);
+    PingppUI.showPaymentChannels(getCurrentActivity(), new ChannelListener(){
+      public void selectChannel(String channel) {
+        callback.invoke(channel);
+      }
+    });
+  }
+
+  @ReactMethod
+  public void createPay(String charge, final Callback resultCallback) {
+    PingppUI.createPay(getCurrentActivity(), charge, new PaymentHandler(){
+      @Override public void handlePaymentResult(Intent data) {
+        int code = data.getExtras().getInt("code");
+        String result = data.getExtras().getString("result");
+        try {
+          JSONObject object = new JSONObject();
+          if(code == 0) {
+              object.put("pay_result", "cancel");
+              object.put("error_msg", result);
+          } else if(code == -1) {
+              object.put("pay_result", "fail");
+              object.put("error_msg", result);
+          } else if(code == 1) {
+              object.put("pay_result", "success");
+          }
+          resultCallback.invoke(object.toString());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      }
+    });
   }
 
   @ReactMethod
