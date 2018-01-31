@@ -3,20 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0054214D2020839F00F4D5D2 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005421372020839E00F4D5D2 /* AlipaySDK.framework */; };
+		0054214E2020839F00F4D5D2 /* libpingpp+alipay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005421382020839E00F4D5D2 /* libpingpp+alipay.a */; };
+		0054214F2020839F00F4D5D2 /* cmbkeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0054213A2020839E00F4D5D2 /* cmbkeyboard.framework */; };
+		005421502020839F00F4D5D2 /* libpingpp+cmbWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0054213B2020839E00F4D5D2 /* libpingpp+cmbWallet.a */; };
+		005421512020839F00F4D5D2 /* libpingpp+qqwallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0054213D2020839E00F4D5D2 /* libpingpp+qqwallet.a */; };
+		005421522020839F00F4D5D2 /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0054213F2020839E00F4D5D2 /* libPaymentControl.a */; };
+		005421532020839F00F4D5D2 /* libpingpp+up.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005421402020839E00F4D5D2 /* libpingpp+up.a */; };
+		005421542020839F00F4D5D2 /* libpingpp+network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005421432020839E00F4D5D2 /* libpingpp+network.a */; };
+		005421552020839F00F4D5D2 /* libpingpp+webview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005421462020839E00F4D5D2 /* libpingpp+webview.a */; };
+		005421562020839F00F4D5D2 /* libpingppcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 005421472020839E00F4D5D2 /* libpingppcore.a */; };
+		005421572020839F00F4D5D2 /* libpingpp+ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0054214B2020839E00F4D5D2 /* libpingpp+ui.a */; };
 		0094C19B1E70F65E0006D297 /* PingppModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0094C19A1E70F65E0006D297 /* PingppModule.m */; };
 		0094C19C1E70F65E0006D297 /* PingppModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0094C1991E70F65E0006D297 /* PingppModule.h */; };
-		0094C3081E7130120006D297 /* libpingpp+alipay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C1D01E7130110006D297 /* libpingpp+alipay.a */; };
-		0094C30D1E7130120006D297 /* libpingpp+cmbWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C1D81E7130110006D297 /* libpingpp+cmbWallet.a */; };
-		0094C3121E7130120006D297 /* libpingpp+qqwallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C2F51E7130120006D297 /* libpingpp+qqwallet.a */; };
-		0094C3131E7130120006D297 /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C2F71E7130120006D297 /* libPaymentControl.a */; };
-		0094C3141E7130120006D297 /* libpingpp+up.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C2F81E7130120006D297 /* libpingpp+up.a */; };
-		0094C3161E7130120006D297 /* libpingpp+network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C2FD1E7130120006D297 /* libpingpp+network.a */; };
-		0094C3171E7130120006D297 /* libpingpp+webview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C3001E7130120006D297 /* libpingpp+webview.a */; };
-		0094C3181E7130120006D297 /* libpingppcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C3011E7130120006D297 /* libpingppcore.a */; };
 		0094C3991E7133720006D297 /* AlipaySDK in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C3981E7133720006D297 /* AlipaySDK */; };
 		0094C39B1E7133A50006D297 /* cmbkeyboard in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094C39A1E7133A50006D297 /* cmbkeyboard */; };
 /* End PBXBuildFile section */
@@ -35,23 +38,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		005421362020839E00F4D5D2 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		005421372020839E00F4D5D2 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		005421382020839E00F4D5D2 /* libpingpp+alipay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+alipay.a"; sourceTree = "<group>"; };
+		0054213A2020839E00F4D5D2 /* cmbkeyboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cmbkeyboard.framework; sourceTree = "<group>"; };
+		0054213B2020839E00F4D5D2 /* libpingpp+cmbWallet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+cmbWallet.a"; sourceTree = "<group>"; };
+		0054213D2020839E00F4D5D2 /* libpingpp+qqwallet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+qqwallet.a"; sourceTree = "<group>"; };
+		0054213F2020839E00F4D5D2 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
+		005421402020839E00F4D5D2 /* libpingpp+up.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+up.a"; sourceTree = "<group>"; };
+		005421432020839E00F4D5D2 /* libpingpp+network.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+network.a"; sourceTree = "<group>"; };
+		005421442020839E00F4D5D2 /* PingppURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingppURLResponse.h; sourceTree = "<group>"; };
+		005421462020839E00F4D5D2 /* libpingpp+webview.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+webview.a"; sourceTree = "<group>"; };
+		005421472020839E00F4D5D2 /* libpingppcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingppcore.a; sourceTree = "<group>"; };
+		005421482020839E00F4D5D2 /* Pingpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Pingpp.bundle; sourceTree = "<group>"; };
+		005421492020839E00F4D5D2 /* Pingpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pingpp.h; sourceTree = "<group>"; };
+		0054214B2020839E00F4D5D2 /* libpingpp+ui.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+ui.a"; sourceTree = "<group>"; };
+		0054214C2020839E00F4D5D2 /* Pingpp+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pingpp+UI.h"; sourceTree = "<group>"; };
 		0094C1961E70F65E0006D297 /* libPingppModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPingppModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0094C1991E70F65E0006D297 /* PingppModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PingppModule.h; sourceTree = "<group>"; };
 		0094C19A1E70F65E0006D297 /* PingppModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingppModule.m; sourceTree = "<group>"; };
-		0094C1CE1E7130110006D297 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
-		0094C1CF1E7130110006D297 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
-		0094C1D01E7130110006D297 /* libpingpp+alipay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+alipay.a"; sourceTree = "<group>"; };
-		0094C1D71E7130110006D297 /* cmbkeyboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cmbkeyboard.framework; sourceTree = "<group>"; };
-		0094C1D81E7130110006D297 /* libpingpp+cmbWallet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+cmbWallet.a"; sourceTree = "<group>"; };
-		0094C2F51E7130120006D297 /* libpingpp+qqwallet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+qqwallet.a"; sourceTree = "<group>"; };
-		0094C2F71E7130120006D297 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
-		0094C2F81E7130120006D297 /* libpingpp+up.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+up.a"; sourceTree = "<group>"; };
-		0094C2FD1E7130120006D297 /* libpingpp+network.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+network.a"; sourceTree = "<group>"; };
-		0094C2FE1E7130120006D297 /* PingppURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingppURLResponse.h; sourceTree = "<group>"; };
-		0094C3001E7130120006D297 /* libpingpp+webview.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpingpp+webview.a"; sourceTree = "<group>"; };
-		0094C3011E7130120006D297 /* libpingppcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpingppcore.a; sourceTree = "<group>"; };
-		0094C3051E7130120006D297 /* Pingpp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Pingpp.bundle; sourceTree = "<group>"; };
-		0094C3061E7130120006D297 /* Pingpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pingpp.h; sourceTree = "<group>"; };
 		0094C3981E7133720006D297 /* AlipaySDK */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = AlipaySDK; path = PingppModule/lib/Channels/Alipay/AlipaySDK.framework/AlipaySDK; sourceTree = "<group>"; };
 		0094C39A1E7133A50006D297 /* cmbkeyboard */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = cmbkeyboard; path = PingppModule/lib/Channels/CmbWallet/cmbkeyboard.framework/cmbkeyboard; sourceTree = "<group>"; };
 		0094C39C1E7133F30006D297 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -62,22 +67,120 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005421522020839F00F4D5D2 /* libPaymentControl.a in Frameworks */,
+				005421572020839F00F4D5D2 /* libpingpp+ui.a in Frameworks */,
 				0094C39B1E7133A50006D297 /* cmbkeyboard in Frameworks */,
+				005421532020839F00F4D5D2 /* libpingpp+up.a in Frameworks */,
+				0054214E2020839F00F4D5D2 /* libpingpp+alipay.a in Frameworks */,
+				005421542020839F00F4D5D2 /* libpingpp+network.a in Frameworks */,
+				0054214F2020839F00F4D5D2 /* cmbkeyboard.framework in Frameworks */,
+				005421552020839F00F4D5D2 /* libpingpp+webview.a in Frameworks */,
 				0094C3991E7133720006D297 /* AlipaySDK in Frameworks */,
-				0094C3181E7130120006D297 /* libpingppcore.a in Frameworks */,
-				0094C30D1E7130120006D297 /* libpingpp+cmbWallet.a in Frameworks */,
-				0094C3081E7130120006D297 /* libpingpp+alipay.a in Frameworks */,
-				0094C3121E7130120006D297 /* libpingpp+qqwallet.a in Frameworks */,
-				0094C3141E7130120006D297 /* libpingpp+up.a in Frameworks */,
-				0094C3161E7130120006D297 /* libpingpp+network.a in Frameworks */,
-				0094C3171E7130120006D297 /* libpingpp+webview.a in Frameworks */,
-				0094C3131E7130120006D297 /* libPaymentControl.a in Frameworks */,
+				005421562020839F00F4D5D2 /* libpingppcore.a in Frameworks */,
+				0054214D2020839F00F4D5D2 /* AlipaySDK.framework in Frameworks */,
+				005421502020839F00F4D5D2 /* libpingpp+cmbWallet.a in Frameworks */,
+				005421512020839F00F4D5D2 /* libpingpp+qqwallet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005421332020839E00F4D5D2 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				005421342020839E00F4D5D2 /* Channels */,
+				005421412020839E00F4D5D2 /* Dependencies */,
+				005421472020839E00F4D5D2 /* libpingppcore.a */,
+				005421482020839E00F4D5D2 /* Pingpp.bundle */,
+				005421492020839E00F4D5D2 /* Pingpp.h */,
+				0054214A2020839E00F4D5D2 /* UI */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		005421342020839E00F4D5D2 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				005421352020839E00F4D5D2 /* Alipay */,
+				005421392020839E00F4D5D2 /* CmbWallet */,
+				0054213C2020839E00F4D5D2 /* QQWallet */,
+				0054213E2020839E00F4D5D2 /* UnionPay */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		005421352020839E00F4D5D2 /* Alipay */ = {
+			isa = PBXGroup;
+			children = (
+				005421362020839E00F4D5D2 /* AlipaySDK.bundle */,
+				005421372020839E00F4D5D2 /* AlipaySDK.framework */,
+				005421382020839E00F4D5D2 /* libpingpp+alipay.a */,
+			);
+			path = Alipay;
+			sourceTree = "<group>";
+		};
+		005421392020839E00F4D5D2 /* CmbWallet */ = {
+			isa = PBXGroup;
+			children = (
+				0054213A2020839E00F4D5D2 /* cmbkeyboard.framework */,
+				0054213B2020839E00F4D5D2 /* libpingpp+cmbWallet.a */,
+			);
+			path = CmbWallet;
+			sourceTree = "<group>";
+		};
+		0054213C2020839E00F4D5D2 /* QQWallet */ = {
+			isa = PBXGroup;
+			children = (
+				0054213D2020839E00F4D5D2 /* libpingpp+qqwallet.a */,
+			);
+			path = QQWallet;
+			sourceTree = "<group>";
+		};
+		0054213E2020839E00F4D5D2 /* UnionPay */ = {
+			isa = PBXGroup;
+			children = (
+				0054213F2020839E00F4D5D2 /* libPaymentControl.a */,
+				005421402020839E00F4D5D2 /* libpingpp+up.a */,
+			);
+			path = UnionPay;
+			sourceTree = "<group>";
+		};
+		005421412020839E00F4D5D2 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				005421422020839E00F4D5D2 /* Network */,
+				005421452020839E00F4D5D2 /* WebView */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		005421422020839E00F4D5D2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				005421432020839E00F4D5D2 /* libpingpp+network.a */,
+				005421442020839E00F4D5D2 /* PingppURLResponse.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		005421452020839E00F4D5D2 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				005421462020839E00F4D5D2 /* libpingpp+webview.a */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		0054214A2020839E00F4D5D2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0054214B2020839E00F4D5D2 /* libpingpp+ui.a */,
+				0054214C2020839E00F4D5D2 /* Pingpp+UI.h */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		0094C18D1E70F65E0006D297 = {
 			isa = PBXGroup;
 			children = (
@@ -98,96 +201,11 @@
 		0094C1981E70F65E0006D297 /* PingppModule */ = {
 			isa = PBXGroup;
 			children = (
-				0094C1CB1E7130110006D297 /* lib */,
+				005421332020839E00F4D5D2 /* lib */,
 				0094C1991E70F65E0006D297 /* PingppModule.h */,
 				0094C19A1E70F65E0006D297 /* PingppModule.m */,
 			);
 			path = PingppModule;
-			sourceTree = "<group>";
-		};
-		0094C1CB1E7130110006D297 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				0094C1CC1E7130110006D297 /* Channels */,
-				0094C2FB1E7130120006D297 /* Dependencies */,
-				0094C3011E7130120006D297 /* libpingppcore.a */,
-				0094C3051E7130120006D297 /* Pingpp.bundle */,
-				0094C3061E7130120006D297 /* Pingpp.h */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		0094C1CC1E7130110006D297 /* Channels */ = {
-			isa = PBXGroup;
-			children = (
-				0094C1CD1E7130110006D297 /* Alipay */,
-				0094C1D61E7130110006D297 /* CmbWallet */,
-				0094C2F41E7130120006D297 /* QQWallet */,
-				0094C2F61E7130120006D297 /* UnionPay */,
-			);
-			path = Channels;
-			sourceTree = "<group>";
-		};
-		0094C1CD1E7130110006D297 /* Alipay */ = {
-			isa = PBXGroup;
-			children = (
-				0094C1CE1E7130110006D297 /* AlipaySDK.bundle */,
-				0094C1CF1E7130110006D297 /* AlipaySDK.framework */,
-				0094C1D01E7130110006D297 /* libpingpp+alipay.a */,
-			);
-			path = Alipay;
-			sourceTree = "<group>";
-		};
-		0094C1D61E7130110006D297 /* CmbWallet */ = {
-			isa = PBXGroup;
-			children = (
-				0094C1D71E7130110006D297 /* cmbkeyboard.framework */,
-				0094C1D81E7130110006D297 /* libpingpp+cmbWallet.a */,
-			);
-			path = CmbWallet;
-			sourceTree = "<group>";
-		};
-		0094C2F41E7130120006D297 /* QQWallet */ = {
-			isa = PBXGroup;
-			children = (
-				0094C2F51E7130120006D297 /* libpingpp+qqwallet.a */,
-			);
-			path = QQWallet;
-			sourceTree = "<group>";
-		};
-		0094C2F61E7130120006D297 /* UnionPay */ = {
-			isa = PBXGroup;
-			children = (
-				0094C2F71E7130120006D297 /* libPaymentControl.a */,
-				0094C2F81E7130120006D297 /* libpingpp+up.a */,
-			);
-			path = UnionPay;
-			sourceTree = "<group>";
-		};
-		0094C2FB1E7130120006D297 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				0094C2FC1E7130120006D297 /* Network */,
-				0094C2FF1E7130120006D297 /* WebView */,
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		0094C2FC1E7130120006D297 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				0094C2FD1E7130120006D297 /* libpingpp+network.a */,
-				0094C2FE1E7130120006D297 /* PingppURLResponse.h */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		0094C2FF1E7130120006D297 /* WebView */ = {
-			isa = PBXGroup;
-			children = (
-				0094C3001E7130120006D297 /* libpingpp+webview.a */,
-			);
-			path = WebView;
 			sourceTree = "<group>";
 		};
 		0094C3971E7133710006D297 /* Frameworks */ = {
@@ -236,6 +254,7 @@
 				};
 			};
 			buildConfigurationList = 0094C1911E70F65E0006D297 /* Build configuration list for PBXProject "PingppModule" */;
+			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -354,6 +373,11 @@
 		0094C1A01E70F65E0006D297 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PingppModule/lib/Channels/Alipay",
+					"$(PROJECT_DIR)/PingppModule/lib/Channels/CmbWallet",
+				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,6 +389,7 @@
 					"$(PROJECT_DIR)/PingppModule/lib/Dependencies/Network",
 					"$(PROJECT_DIR)/PingppModule/lib/Dependencies/WebView",
 					"$(PROJECT_DIR)/PingppModule/lib",
+					"$(PROJECT_DIR)/PingppModule/lib/UI",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,6 +400,11 @@
 		0094C1A11E70F65E0006D297 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PingppModule/lib/Channels/Alipay",
+					"$(PROJECT_DIR)/PingppModule/lib/Channels/CmbWallet",
+				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,6 +416,7 @@
 					"$(PROJECT_DIR)/PingppModule/lib/Dependencies/Network",
 					"$(PROJECT_DIR)/PingppModule/lib/Dependencies/WebView",
 					"$(PROJECT_DIR)/PingppModule/lib",
+					"$(PROJECT_DIR)/PingppModule/lib/UI",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

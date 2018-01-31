@@ -30,6 +30,7 @@ export default class PingppDemoApp extends Component {
       "http://218.244.151.190/demo/charge",
       {amount: 1, channel: channel, order_no: new Date().getTime()},
       function(object) {
+        //调用 标准版 SDK 
         Pingpp.createPayment(
           {
             "object":object,
@@ -40,6 +41,18 @@ export default class PingppDemoApp extends Component {
             alert(JSON.stringify(error));
           }
         );
+        //调用 UI版 SDK 
+        // Pingpp.createPay(
+        //   {
+        //     "object":object,
+        //     "scheme":"pingppdemoapp"
+        //   }, function(res, error) {
+        //     alert(res);
+        //     console.log(error);
+        //     alert(JSON.stringify(error));
+        //   }
+        // );
+
       }
     );
   }

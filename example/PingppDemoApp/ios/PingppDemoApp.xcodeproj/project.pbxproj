@@ -301,6 +301,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00542119202082AF00F4D5D2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				79DA8380678A48098FC0A019 /* libPingppModule.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +492,7 @@
 				00E356EF1AD99517003FC87E /* PingppDemoAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				1E9080C21E829B9A00A80F78 /* Frameworks */,
+				00542119202082AF00F4D5D2 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
