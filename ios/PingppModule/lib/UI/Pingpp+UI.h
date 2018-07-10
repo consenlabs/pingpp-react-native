@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^PingppUICompletion)(NSString *result, PingppURLResponse * __nullable response, NSError * __nullable error);
-typedef void (^PingppUICloseSuccessView)(void);
+
 typedef NS_OPTIONS(NSUInteger, PingppBtnOption) {
     PingppBtnAlipay = 1 << 0,
     PingppBtnWx = 1 << 1,
@@ -62,15 +62,7 @@ typedef NS_ENUM(NSUInteger, PingppExtraChannel){
          appURLScheme:(nonnull NSString*)appURLScheme
        withCompletion:(PingppCompletion) completion;
 
-/**
- * 调用 支付成功 页面
- * @param object (支付成功的charge或order)
- * @param viewController 当前的 ViewController
- */
 
-+ (void)showSuccessView:(NSObject *)object
-         viewController:(UIViewController *)viewController
-       closeSuccessView:(PingppUICloseSuccessView)completion;
 
 /**
  *  设置请求 charge 的 URL（会被上述方法的 chargeURL 覆盖）
