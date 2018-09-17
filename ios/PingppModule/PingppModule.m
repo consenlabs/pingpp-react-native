@@ -26,7 +26,7 @@ RCT_EXPORT_METHOD(createPayment:(NSDictionary *)paramDict
     
     [Pingpp ignoreResultUrl:YES];
     dispatch_sync(dispatch_get_main_queue(), ^{
-        [Pingpp createPay:object viewController:viewController appURLScheme:scheme withCompletion:^(NSString *result, PingppError *error) {
+        [Pingpp createPayment:object viewController:viewController appURLScheme:scheme withCompletion:^(NSString *result, PingppError *error) {
             if (error) {
                 completionBlock(@[result,@{@"code":[NSNumber numberWithInteger:error.code],@"message":error.getMsg}]);
             }else{
@@ -50,7 +50,7 @@ RCT_EXPORT_METHOD(createPay:(NSDictionary *)paramDict
     
     [Pingpp ignoreResultUrl:YES];
     dispatch_sync(dispatch_get_main_queue(), ^{
-        [Pingpp createPayment:object viewController:viewController appURLScheme:scheme withCompletion:^(NSString *result, PingppError *error) {
+        [Pingpp createPay:object viewController:viewController appURLScheme:scheme withCompletion:^(NSString *result, PingppError *error) {
             if (error) {
                 completionBlock(@[result,@{@"code":[NSNumber numberWithInteger:error.code],@"message":error.getMsg}]);
             }else{
