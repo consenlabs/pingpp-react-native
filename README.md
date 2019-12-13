@@ -77,7 +77,7 @@ var Pingpp = require('pingpp-react-native');
 ### iOS 使用示例
 
 ```jsx
-/** 
+/**
 * 调用支付
 * @param object {"object":"charge 或 order" , "urlScheme":"YOU-URLSCHEME"}
 * @param function completionCallback  支付结果回调 (result, error)
@@ -92,32 +92,24 @@ Pingpp.createPayment({
 /**
 * 开启/关闭 Ping++ debug 模式 
 * @param boolean true 或 false
-*/ 
+*/
 Pingpp.setDebugModel(true);  
 
 /**
-* 获取 SDK 版本号 
+* 获取 SDK 版本号
 * @param function completionCallback  结果回调 (version)
-*/ 
+*/
 Pingpp.getVersion(function(version) {
     alert(version);
 });
 
 ```
 
-####接收并处理交易结果
+#### 接收并处理交易结果
 渠道为百度钱包或者渠道为支付宝但未安装支付宝钱包时，交易结果会在调起插件时的 Completion 中返回。渠道为微信、支付宝(安装了支付宝钱包)、银联或者测试模式时，请实现 UIApplicationDelegate 的 - application:openURL:xxxx: 方法:
 打开 `AppDelegate.m`，添加一个函数来触发支付完成后的回调
+
 ```objective-c
-//iOS 8 及以下
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-    BOOL canHandleURL = [Pingpp handleOpenURL:url withCompletion:nil];
-    return canHandleURL;
-}
-//iOS 9 及以上
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary *)options {
@@ -141,12 +133,12 @@ Pingpp.getVersion(function(version) {
 
 ```jsx
 /**
- * 开启/关闭 Ping++ debug 模式 
+ * 开启/关闭 Ping++ debug 模式
  * @param boolean true 或 false
- */ 
+ */
 Pingpp.setDebug(true);
 
-/** 
+/**
  * 调用支付
  * @param charge 或 order (String 类型)
  * @param function completionCallback  支付结果回调 (result)
