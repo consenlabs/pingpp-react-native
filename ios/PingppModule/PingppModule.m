@@ -8,68 +8,43 @@
 
 #import "PingppModule.h"
 #import "Pingpp.h"
-#import "Pingpp+UI.h"
+
 @implementation PingppModule
 RCT_EXPORT_MODULE(PingppModule);
 
 RCT_EXPORT_METHOD(createPayment:(NSDictionary *)paramDict
                   completionBlock:(RCTResponseSenderBlock)completionBlock)
 {
-    
     NSString *object = [paramDict objectForKey:@"object"];
     NSString *scheme = [paramDict objectForKey:@"urlScheme"];
-    
+
     if (scheme == nil) {
         scheme = [self getUrlScheme];
     }
-    UIViewController * viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    
-    [Pingpp ignoreResultUrl:YES];
+
     dispatch_sync(dispatch_get_main_queue(), ^{
+        
+        UIViewController * viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+
+        [Pingpp ignoreResultUrl:YES];
         [Pingpp createPayment:object viewController:viewController appURLScheme:scheme withCompletion:^(NSString *result, PingppError *error) {
             if (error) {
                 completionBlock(@[result,@{@"code":[NSNumber numberWithInteger:error.code],@"message":error.getMsg}]);
-            }else{
+            } else {
                 completionBlock(@[result]);
             }
         }];
     });
 }
-
-RCT_EXPORT_METHOD(createPay:(NSDictionary *)paramDict
-                  completionBlock:(RCTResponseSenderBlock)completionBlock)
-{
-    
-    NSString *object = [paramDict objectForKey:@"object"];
-    NSString *scheme = [paramDict objectForKey:@"urlScheme"];
-    
-    if (scheme == nil) {
-        scheme = [self getUrlScheme];
-    }
-    UIViewController * viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    
-    [Pingpp ignoreResultUrl:YES];
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [Pingpp createPay:object viewController:viewController appURLScheme:scheme withCompletion:^(NSString *result, PingppError *error) {
-            if (error) {
-                completionBlock(@[result,@{@"code":[NSNumber numberWithInteger:error.code],@"message":error.getMsg}]);
-            }else{
-                completionBlock(@[result]);
-            }
-        }];
-    });
-}
-
 
 RCT_EXPORT_METHOD(setDebugModel:(BOOL)enabled){
     [Pingpp setDebugMode:enabled];
     
     if (enabled) {
         NSLog(@"成功开启 Ping++ DebugMode");
-    }else{
+    } else {
         NSLog(@"成功关闭 Ping++ DebugMode");
     }
-    
 }
 
 RCT_EXPORT_METHOD(getVersion:(RCTResponseSenderBlock)block){

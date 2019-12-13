@@ -33,5 +33,4 @@ public class PingppPackage implements ReactPackage {
     return Collections.emptyList();
   }
 
-
 }

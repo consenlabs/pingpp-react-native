@@ -1,5 +1,0 @@
-rootProject.name = 'PingppDemoApp'
-include ':pingpp-react-native'
-project(':pingpp-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/pingpp-react-native/android')
-
-include ':app'

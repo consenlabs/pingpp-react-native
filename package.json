@@ -1,6 +1,6 @@
 {
   "name": "pingpp-react-native",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "React Native binding library for Ping++.",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,12 @@
     "url": "https://coding.net/u/pingplusplus/p/pingpp-react-native/topic"
   },
   "author": "Ping++",
-  "homepage": "https://coding.net/u/pingplusplus/p/pingpp-react-native/git"
+  "homepage": "https://coding.net/u/pingplusplus/p/pingpp-react-native/git",
+  "files": [
+    "android",
+    "ios",
+    "lib",
+    "index.js",
+    "pingpp-react-native.podspec"
+  ]
 }

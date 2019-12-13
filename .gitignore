@@ -50,3 +50,5 @@ buck-out/
 \.buckd/
 *.keystore
 example/PingppDemoApp/__tests__
+android/.settings
+.project
