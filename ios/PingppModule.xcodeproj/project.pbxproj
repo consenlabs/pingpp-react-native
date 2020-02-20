@@ -237,7 +237,10 @@
 					"$(PROJECT_DIR)/PingppModule/lib/Channels/Alipay",
 					"$(PROJECT_DIR)/PingppModule/lib/Channels/CmbWallet",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../react-native/React/**",
+					"${SRCROOT}/../../../ios/Pods/Pingpp/lib/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PingppModule/lib/Channels/Alipay",
@@ -249,6 +252,7 @@
 					"$(PROJECT_DIR)/PingppModule/lib/Dependencies/WebView",
 					"$(PROJECT_DIR)/PingppModule/lib",
 					"$(PROJECT_DIR)/PingppModule/lib/UI",
+					"${SRCROOT}/../../../ios/Pods/Pingpp/lib/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -264,7 +268,10 @@
 					"$(PROJECT_DIR)/PingppModule/lib/Channels/Alipay",
 					"$(PROJECT_DIR)/PingppModule/lib/Channels/CmbWallet",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../react-native/React/**",
+					"${SRCROOT}/../../../ios/Pods/Pingpp/lib/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PingppModule/lib/Channels/Alipay",
@@ -276,6 +283,7 @@
 					"$(PROJECT_DIR)/PingppModule/lib/Dependencies/WebView",
 					"$(PROJECT_DIR)/PingppModule/lib",
 					"$(PROJECT_DIR)/PingppModule/lib/UI",
+					"${SRCROOT}/../../../ios/Pods/Pingpp/lib/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
